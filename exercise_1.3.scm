@@ -1,7 +1,7 @@
-(define (sum_of_squares a b c)
-  (
-   (define (first) (if (> a b) a b))
-   (define (second) (if (> first c) first c))
-   (+ (* first first) (* second second))))
+(define (square x)
+  (* x x ))
 
-(print (sum_of_squares 3 4 5))
+(define (sum-of-squares x y z)
+  (if (>= x y)
+      (+ (square x) (square (if (>= y z) y z)))
+      (+ (square y) (square (if (>= x z) x z)))))
